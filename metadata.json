@@ -1,0 +1,8 @@
+{
+  "name": "MetaAI Hyper Browser OS",
+  "description": "A next-generation AI-powered operating system browser hybrid combining search, automation, marketplace, and creative AI tools.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
