@@ -7,6 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Setup Project Structure
+        run: |
+          mkdir -p src public
+          # Move files into src if they are outside
+          mv *.tsx *.ts *.css src/ 2>/dev/null || true
+          # Move index.html into public if it's outside
+          mv index.html public/ 2>/dev/null || true
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -35,3 +43,4 @@ jobs:
         with:
           name: MetaAI-Browser-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
+          
